@@ -54,7 +54,7 @@ if (cluster.isMaster) {
 	var counter = parseInt(process.env.inc)
 	var _id = process.env._id
 
-	console.log(`Worker ${process.pid} started task on _id = ${process.env._id} : inc ${counter} abount ${times} times`)
+	console.log(`Worker ${process.pid} started task on _id = ${process.env._id} : inc ${counter} about ${times} times`)
 		
 	var ops = []
 	for (var i = 0; i < times; i++) 
