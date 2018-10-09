@@ -1,4 +1,3 @@
-
 const numWorkers = 4// -по заданию
 const cluster = require('cluster')
 const mongoose = require('mongoose')
