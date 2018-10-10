@@ -1,5 +1,6 @@
 const numWorkers = 4
 const times = 50 // -по заданию
+
 const cluster = require('cluster')
 const mongoose = require('mongoose')
 const chalk   = require('chalk')
@@ -58,7 +59,7 @@ if (cluster.isMaster) {
 
 	log(`Worker ${process.pid} started task on _id = ${process.env._id} : inc ${counter} about ${times} times`)
 		
-	var ops = []
+	let ops = []
 	for (let i = 0; i < times; i++) 
 		ops[i] = Doc.updateOne({ _id }, {$inc : { counter }} ).exec()
 	
